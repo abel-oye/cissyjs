@@ -1,0 +1,97 @@
+@import "common/reset.scss";
+@import "common/mixin/_utils.scss";
+
+.cy-row,
+.cy-content,
+.cf{
+	@include clearfix();
+}
+.row{
+	min-height:200px;
+}
+//编辑模式
+.edit {
+	.cy-module{
+		position: relative;
+		&:hover{
+			cursor: move;
+			background-color:#ddd;
+			.cy-top-bar,
+			.cy-bottom-bar{
+				display:block;
+			}
+		}
+	}
+	.cy-nav{
+		left: 0;
+	    position: fixed;
+	    right: 0;
+	    top: 0;
+	    z-index: 1030;
+	    overflow: visible;
+	    background-color: #111111; 
+	    min-height: 46px;
+	    color: #ffffff;
+	    background: rgba(0, 0, 0, .7);
+	    text-decoration: none;
+	    font-weight: normal;
+	}
+	.cy-header{
+		border:1px solid #000;
+		
+	}
+	.cy-content{
+		border:1px solid #000;
+		min-height:400px;
+	}
+	.cy-aside{
+		border:1px solid #000;
+		min-width: 250px;
+		width: 15%;
+		float: left;
+		min-height: 400px;
+	}
+	.cy-body{
+		border:1px solid #000;
+		float: left;
+		height: 400px;
+		width: 83%;
+		min-width: 250px;
+	}
+	.cy-top-bar,
+	.cy-bottom-bar{
+		display: none;
+		white-space: nowrap;
+		padding: 5px;
+		text-align:right;
+		.attr,button{
+			cursor:pointer;
+			padding: 5px 6px;
+			-webkit-border-radius: 3px;
+			-moz-border-radius: 3px;
+			border-radius: 3px;
+			border:1px solid #ddd;
+			background:#fff;
+			outline: none;
+		}
+	}
+	.cy-bottom-bar{
+		position:absolute;
+		bottom:0;
+		left:0;
+	}
+	.add-module{
+		border:1px dashed #ddd;
+		min-height: initial;
+		padding: 5px;
+		text-align:center;
+		margin:20px;
+		color:#666;
+	}
+}
+//预览模式
+.preview{
+	.cy-nav{
+		display: none!important;
+	}
+}

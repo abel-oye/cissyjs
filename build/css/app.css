@@ -1,0 +1,114 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul, ol, li {
+  list-style: none;
+}
+
+/*
+*
+*/
+.cy-row:before, .cy-row:after,
+.cy-content:before,
+.cy-content:after,
+.cf:before,
+.cf:after {
+  content: "";
+  display: table;
+}
+.cy-row:after,
+.cy-content:after,
+.cf:after {
+  clear: both;
+}
+
+.row {
+  min-height: 200px;
+}
+
+.edit .cy-module {
+  position: relative;
+}
+.edit .cy-module:hover {
+  cursor: move;
+  background-color: #ddd;
+}
+.edit .cy-module:hover .cy-top-bar,
+.edit .cy-module:hover .cy-bottom-bar {
+  display: block;
+}
+.edit .cy-nav {
+  left: 0;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 1030;
+  overflow: visible;
+  background-color: #111111;
+  min-height: 46px;
+  color: #ffffff;
+  background: rgba(0, 0, 0, 0.7);
+  text-decoration: none;
+  font-weight: normal;
+}
+.edit .cy-header {
+  border: 1px solid #000;
+}
+.edit .cy-content {
+  border: 1px solid #000;
+  min-height: 400px;
+}
+.edit .cy-aside {
+  border: 1px solid #000;
+  min-width: 250px;
+  width: 15%;
+  float: left;
+  min-height: 400px;
+}
+.edit .cy-body {
+  border: 1px solid #000;
+  float: left;
+  height: 400px;
+  width: 83%;
+  min-width: 250px;
+}
+.edit .cy-top-bar,
+.edit .cy-bottom-bar {
+  display: none;
+  white-space: nowrap;
+  padding: 5px;
+  text-align: right;
+}
+.edit .cy-top-bar .attr, .edit .cy-top-bar button,
+.edit .cy-bottom-bar .attr,
+.edit .cy-bottom-bar button {
+  cursor: pointer;
+  padding: 5px 6px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  border: 1px solid #ddd;
+  background: #fff;
+  outline: none;
+}
+.edit .cy-bottom-bar {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.edit .add-module {
+  border: 1px dashed #ddd;
+  min-height: initial;
+  padding: 5px;
+  text-align: center;
+  margin: 20px;
+  color: #666;
+}
+
+.preview .cy-nav {
+  display: none !important;
+}
+
+/*# sourceMappingURL=app.css.map */
